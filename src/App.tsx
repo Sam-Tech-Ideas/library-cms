@@ -9,7 +9,6 @@ import {
 } from "firecms";
 import "typeface-rubik";
 import "@fontsource/ibm-plex-mono";
-import { categories } from "./enums";
 
 // TODO: Replace with your config
 // const firebaseConfig = {
