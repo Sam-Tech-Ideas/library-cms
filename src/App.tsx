@@ -12,13 +12,21 @@ import "@fontsource/ibm-plex-mono";
 import { categories } from "./enums";
 
 // TODO: Replace with your config
+// const firebaseConfig = {
+//   apiKey: "AIzaSyBN1ueTkWPxii2jA8nN8bXfcdt0VJOldQ0",
+//   authDomain: "natrendies-e7e65.firebaseapp.com",
+//   projectId: "natrendies-e7e65",
+//   storageBucket: "natrendies-e7e65.appspot.com",
+//   messagingSenderId: "695156067564",
+//   appId: "1:695156067564:web:f8eca07a36426363f3e9c9",
+// };
 const firebaseConfig = {
-  apiKey: "AIzaSyC_hn6xbenSm3PDFwksFK8EMANg-nhvGQI",
-  authDomain: "librarysystem-ba088.firebaseapp.com",
-  projectId: "librarysystem-ba088",
-  storageBucket: "librarysystem-ba088.appspot.com",
-  messagingSenderId: "804159856539",
-  appId: "1:804159856539:web:2df2cafcb05ddb69d94b3e",
+  apiKey: "AIzaSyDJJWARQDeHBSZu5rZ20ot_DUjT-qubUMI",
+  authDomain: "saarps-3ecc8.firebaseapp.com",
+  projectId: "saarps-3ecc8",
+  storageBucket: "saarps-3ecc8.appspot.com",
+  messagingSenderId: "298305171083",
+  appId: "1:298305171083:web:d8d661d4efc1e3298b6e8e",
 };
 //i wan to have the id of the user as the id of the book
 
@@ -29,16 +37,9 @@ type Book = {
 
   title: string;
   price: number;
-
-  description: string;
-  author: string;
-  category: string;
   imageUrl: string;
-  copies: number;
-  pages: number;
-  publisher: string;
-  publicationDate: Date;
-  ISBN: number;
+
+  quantity: number;
   // genre: string;
 };
 const bookCallbacks = buildEntityCallbacks({
@@ -49,10 +50,10 @@ const bookCallbacks = buildEntityCallbacks({
   },
 });
 
-const booksCollection = buildCollection<Book>({
-  name: "Books",
-  singularName: "Book",
-  path: "books",
+const productsCollection = buildCollection<Book>({
+  name: "products",
+  singularName: "Product",
+  path: "products",
   permissions: ({}) => ({
     read: true,
     edit: true,
@@ -61,11 +62,7 @@ const booksCollection = buildCollection<Book>({
   }),
 
   properties: {
-    author: {
-      name: "Author",
-      dataType: "string",
-      validation: { required: true },
-    },
+
 
     title: {
       name: "Title",
@@ -77,150 +74,31 @@ const booksCollection = buildCollection<Book>({
       dataType: "number",
       validation: { required: true },
     },
-    description: {
-      name: "Description",
-      dataType: "string",
-      validation: { required: true },
-    },
+    
     imageUrl: {
-      name: "Book image",
+      name: "Product image",
       dataType: "string",
       storage: {
-        storagePath: "books",
+        storagePath: "products",
         storeUrl: true,
       },
     },
-    category: {
-      name: "Category",
-      dataType: "string",
-      enumValues: categories,
-      validation: { required: true },
-    },
-    copies: {
-      name: "Copies",
 
+    quantity: {
+      name: "Quantity",
       dataType: "number",
       validation: { required: true },
     },
-    pages: {
-      name: "Pages",
+  
 
-      dataType: "number",
-
-      validation: { required: true },
-    },
-    publisher: {
-      name: "Publisher",
-
-      dataType: "string",
-
-      validation: { required: true },
-    },
-    publicationDate: {
-      name: "Publication Date",
-      dataType: "date",
-
-      validation: { required: true },
-    },
-    ISBN: {
-      name: "ISBN",
-      dataType: "number",
-      validation: { required: true },
-    },
   },
 
   callbacks: bookCallbacks,
 });
 
-type BorrowedBook = {
-  title: string;
-  ISBN: number;
-  category: string;
-  imageUrl: string;
-  fullName: string;
-  email: string;
-  borrowedDate: Date;
-  returnDate: Date;
-  address: string;
-  author: string;
-};
 
-const borrrowedBooksCollection = buildCollection<BorrowedBook>({
-  name: "Borrowed Books",
-  singularName: "Borrowed Book",
-  path: "borrowedBooks",
 
-  permissions: ({}) => ({
-    read: true,
-    edit: true,
-    create: true,
-    delete: true,
-  }),
 
-  properties: {
-    imageUrl: {
-      name: "Book image",
-      dataType: "string",
-      storage: {
-        storagePath: "books",
-        storeUrl: true,
-      },
-    },
-
-    author: {
-      name: "Author",
-      dataType: "string",
-      validation: { required: true },
-    },
-
-    fullName: {
-      name: "Full Name",
-      dataType: "string",
-      validation: { required: true },
-    },
-    address: {
-      name: "Address",
-      dataType: "string",
-      validation: { required: true },
-    },
-
-    email: {
-      name: "Email",
-      dataType: "string",
-      validation: { required: true },
-    },
-
-    title: {
-      name: "Title",
-
-      dataType: "string",
-      validation: { required: true },
-    },
-    ISBN: {
-      name: "ISBN",
-
-      dataType: "number",
-      validation: { required: true },
-    },
-
-    category: {
-      name: "Category",
-      dataType: "string",
-      enumValues: categories,
-      validation: { required: true },
-    },
-    borrowedDate: {
-      name: "Borrowed Date",
-      dataType: "date",
-      validation: { required: true },
-    },
-    returnDate: {
-      name: "Return Date",
-      dataType: "date",
-      validation: { required: true },
-    },
-  },
-});
 
 type User = {
   name: string;
@@ -257,11 +135,7 @@ const usersCollection = buildCollection<User>({
 
       validation: { required: true },
     },
-    // address: {
-    //   name: "Address",
-    //   dataType: "string",
-    //   validation: { required: true },
-    // },
+  
   },
 });
 
@@ -287,7 +161,7 @@ export default function App() {
     <FirebaseCMSApp
       name={"Library Management admin"}
       authentication={myAuthenticator}
-      collections={[booksCollection, borrrowedBooksCollection, usersCollection]}
+      collections={[productsCollection, usersCollection]}
       firebaseConfig={firebaseConfig}
     />
   );
