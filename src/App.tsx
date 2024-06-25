@@ -20,13 +20,14 @@ import "@fontsource/ibm-plex-mono";
 //   appId: "1:695156067564:web:f8eca07a36426363f3e9c9",
 // };
 const firebaseConfig = {
-  apiKey: "AIzaSyDJJWARQDeHBSZu5rZ20ot_DUjT-qubUMI",
-  authDomain: "saarps-3ecc8.firebaseapp.com",
-  projectId: "saarps-3ecc8",
-  storageBucket: "saarps-3ecc8.appspot.com",
-  messagingSenderId: "298305171083",
-  appId: "1:298305171083:web:d8d661d4efc1e3298b6e8e",
+  apiKey: "AIzaSyDvgHIBAkdR7DW1RxTPVj_W0VI7Sy0kX30",
+  authDomain: "amponsahclothing.firebaseapp.com",
+  projectId: "amponsahclothing",
+  storageBucket: "amponsahclothing.appspot.com",
+  messagingSenderId: "773687035430",
+  appId: "1:773687035430:web:89760cc59f530b6d4288e7",
 };
+
 //i wan to have the id of the user as the id of the book
 
 type Book = {
@@ -165,3 +166,5 @@ export default function App() {
     />
   );
 }
+
+
