@@ -20,12 +20,12 @@ import "@fontsource/ibm-plex-mono";
 //   appId: "1:695156067564:web:f8eca07a36426363f3e9c9",
 // };
 const firebaseConfig = {
-  apiKey: "AIzaSyCo4IYQ6gRzyh9kPeLcWXtNvLFZAA1J7dI",
-  authDomain: "anthoyfashion.firebaseapp.com",
-  projectId: "anthoyfashion",
-  storageBucket: "anthoyfashion.appspot.com",
-  messagingSenderId: "443853745909",
-  appId: "1:443853745909:web:f7347360e54e91006d9fbc",
+  apiKey: "AIzaSyAIIyT3Rdkeavc9Gcx3yH3opF_VCqXbYTc",
+  authDomain: "stephencollections-5f343.firebaseapp.com",
+  projectId: "stephencollections-5f343",
+  storageBucket: "stephencollections-5f343.appspot.com",
+  messagingSenderId: "271148864904",
+  appId: "1:271148864904:web:5df31adb9c9c8a8291163d",
 };
 
 //i wan to have the id of the user as the id of the book
@@ -38,6 +38,7 @@ type Book = {
   title: string;
   price: number;
   imageUrl: string;
+  description: string;
 
   quantity: number;
   // genre: string;
@@ -89,6 +90,13 @@ const productsCollection = buildCollection<Book>({
       dataType: "number",
       validation: { required: true },
     },
+   description: {
+      name: "Description",
+      dataType: "string",
+      validation:{required : false}
+     
+    },
+    
   
 
   },
