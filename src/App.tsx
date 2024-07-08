@@ -20,26 +20,22 @@ import "@fontsource/ibm-plex-mono";
 //   appId: "1:695156067564:web:f8eca07a36426363f3e9c9",
 // };
 const firebaseConfig = {
-  apiKey: "AIzaSyCNFBqwuusEb4UoUAvavA8sCqzbg7iY2sc",
-  authDomain: "angelcouture-e6c1e.firebaseapp.com",
-  projectId: "angelcouture-e6c1e",
-  storageBucket: "angelcouture-e6c1e.appspot.com",
-  messagingSenderId: "855480243552",
-  appId: "1:855480243552:web:a55e521662a87e882cba05",
+  apiKey: "AIzaSyDMMev7oeR9zWZPTfqHIxDULa7rSXNSb3Y",
+  authDomain: "lys-fashion-2de4b.firebaseapp.com",
+  projectId: "lys-fashion-2de4b",
+  storageBucket: "lys-fashion-2de4b.appspot.com",
+  messagingSenderId: "800695555243",
+  appId: "1:800695555243:web:f9319b830156bca6c693ee",
 };
 
 //i wan to have the id of the user as the id of the book
 
 type Book = {
   //use nano id
-
-  //use nano id
-
   title: string;
   price: number;
   imageUrl: string;
   description: string;
-
   quantity: number;
   // genre: string;
 };
