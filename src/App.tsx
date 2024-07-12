@@ -20,12 +20,12 @@ import "@fontsource/ibm-plex-mono";
 //   appId: "1:695156067564:web:f8eca07a36426363f3e9c9",
 // };
 const firebaseConfig = {
-  apiKey: "AIzaSyDMMev7oeR9zWZPTfqHIxDULa7rSXNSb3Y",
-  authDomain: "lys-fashion-2de4b.firebaseapp.com",
-  projectId: "lys-fashion-2de4b",
-  storageBucket: "lys-fashion-2de4b.appspot.com",
-  messagingSenderId: "800695555243",
-  appId: "1:800695555243:web:f9319b830156bca6c693ee",
+  apiKey: "AIzaSyAIIyT3Rdkeavc9Gcx3yH3opF_VCqXbYTc",
+  authDomain: "stephencollections-5f343.firebaseapp.com",
+  projectId: "stephencollections-5f343",
+  storageBucket: "stephencollections-5f343.appspot.com",
+  messagingSenderId: "271148864904",
+  appId: "1:271148864904:web:5df31adb9c9c8a8291163d",
 };
 
 //i wan to have the id of the user as the id of the book
