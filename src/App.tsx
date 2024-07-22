@@ -20,13 +20,15 @@ import "@fontsource/ibm-plex-mono";
 //   appId: "1:695156067564:web:f8eca07a36426363f3e9c9",
 // };
 const firebaseConfig = {
-  apiKey: "AIzaSyDwwRqArgWu0w4mH1cTyJNDcItZwnTb1oc",
-  authDomain: "contact-manager-8bbb4.firebaseapp.com",
-  projectId: "contact-manager-8bbb4",
-  storageBucket: "contact-manager-8bbb4.appspot.com",
-  messagingSenderId: "663510327686",
-  appId: "1:663510327686:web:2fdd834c14bf4f12b14c07",
+  apiKey: "AIzaSyAwVIpyuuJx5QgWhZ7c46fT0x9KKSg6NCo",
+  authDomain: "uniquestyle-527e6.firebaseapp.com",
+  projectId: "uniquestyle-527e6",
+  storageBucket: "uniquestyle-527e6.appspot.com",
+  messagingSenderId: "80824195609",
+  appId: "1:80824195609:web:1f2fdb3956bdb3bbd42888",
 };
+
+
 
 
 
